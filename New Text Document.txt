@@ -1,0 +1,3 @@
+"ip":" BIPLOVE124567.aternos.me:13552
+"port":"13552
+name:baka
