@@ -11,16 +11,16 @@ def clear():
    widget.delete(0,tk.END)
 def get(value):
    widget.insert('end', value)      
-def sumbit():
-   pass
 def evaluate_calculation():
-   pass
+   hello = eval(widget.get())
+   widget.delete(0,tk.END)
+   widget.insert('end' , hello)
 
 # GUis:
 frame1 =tk.Frame(root)
 frame1.columnconfigure(0,weight=2)
 
-widget = tk.Entry(frame1, justify="right" , font=("Time New Roman" , 32) )
+widget = tk.Entry(frame1, justify="right" , font=("Time New Roman" , 32))
 widget.grid(row=0, column=0 , sticky=tk.W+tk.E)
 frame1.pack(fill="x")
 
@@ -85,7 +85,7 @@ btn17.grid(row=4, column=0 , sticky=tk.W+tk.E )
 btn18 = tk.Button(frame , font= ('Time New Roman ' ,19) , height=4 ,text=".",command=lambda:get('.'))
 btn18.grid(row=4, column=1 , sticky=tk.W+tk.E )
 
-btn19 = tk.Button(frame , font= ('Time New Roman ' ,19) , height=4 ,text="=")
+btn19 = tk.Button(frame , font= ('Time New Roman ' ,19) , height=4 ,text="=", command=evaluate_calculation)
 btn19.grid(row=4, column=2, sticky=tk.W+tk.E )
 
 btn20 = tk.Button(frame , font= ('Time New Roman ' ,19) , height=4 ,text="-",command=lambda:get('-'))
